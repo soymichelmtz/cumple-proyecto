@@ -10,10 +10,27 @@
     <div class="card">
         <div class="cake"><img src="images/pusheencake.png" alt="Pusheen Cake" style="width:100px;height:auto;"></div>
         <h1>¡Feliz Cumpleaños Baby!</h1>
-        <p>Te deseo un día lleno de alegría, amor y muchas sorpresas.<br>
-        ¡Que todos tus sueños se hagan realidad!</p>
-        <p>Con cariño,<br> [TuNombre ]</p>
+        
+        <div id="divMensaje" style="display:none;">
+            <p>Te deseo un día lleno de alegría, amor y muchas sorpresas.<br>
+            ¡Que todos tus sueños se hagan realidad!</p>
+            <p>Con cariño,<br> [Tu baby]</p>
+            <button id="btnOcultarMensaje" class="btn btn-secondary btn-sm" style="margin-top:10px;">Ocultar Mensaje</button>
+        </div>
+        <br>
+        <button id="btnAbrirMensaje" class="btn btn-primary btn-lg">Mostrar Mensaje</button>
     </div>
-    <script src="js/main.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            document.getElementById('btnAbrirMensaje').addEventListener('click', function() {
+                document.getElementById('divMensaje').style.display = 'block';
+                this.style.display = 'none';
+                fireConfettiBurst();
+            });
+            document.getElementById('btnOcultarMensaje').addEventListener('click', function() {
+                document.getElementById('divMensaje').style.display = 'none';
+                document.getElementById('btnAbrirMensaje').style.display = 'inline-block';
+            });
+        </script>
 </body>
 </html>
